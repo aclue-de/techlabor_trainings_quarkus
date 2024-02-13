@@ -1,0 +1,1 @@
+quarkus ext add quarkus-hibernate-orm-panache,quarkus-jdbc-postgresql
