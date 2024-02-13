@@ -1,5 +1,6 @@
 package de.aclue.trainings.quarkus;
 
+import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
@@ -21,7 +22,7 @@ public class ChatResource {
     }
 
     @POST
-    public void sendChat(Chat chat) {
+    public void sendChat(@Valid Chat chat) {
         chatService.sendChat(chat);
     }
 }
