@@ -18,7 +18,7 @@ public class ChatResourceTest {
                 .get()
                 .then()
                 .statusCode(200)
-                .body(containsString("\"author\":\"system\",\"message\":\"Hello from System\""));
+                .body(containsString("\"author\":\"system\",\"message\":\"Hello from System DB!\""));
     }
 
     @Test
@@ -35,7 +35,7 @@ public class ChatResourceTest {
                 .get()
                 .then()
                 .statusCode(200)
-                .body(containsString("\"author\":\"system\",\"message\":\"Hello from System\""),
+                .body(containsString("\"author\":\"system\",\"message\":\"Hello from System DB!\""),
                         containsString("\"author\":\"carl\",\"message\":\"Hello World\""));
 
     }

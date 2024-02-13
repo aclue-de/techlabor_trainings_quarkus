@@ -1,0 +1,1 @@
+insert into chat (id, author, message) values (nextval('chat_seq'), 'system', 'Hello from System DB!');

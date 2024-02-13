@@ -34,7 +34,7 @@ Verwenden Sie für die Kommunikation zwischen den beiden Apps die RESTEasy-Clien
 
 Fügen Sie der Chat-Server App aus Aufgabe 1 eine Datenbank hinzu, die die Nachrichten speichert.
 Verwenden Sie hierfür Panache und einen PostgreSQL Treiber.
-(quarkus-hibernate-orm-panachem, quarkus-jdbc-postgresql)
+(quarkus-hibernate-orm-panache, quarkus-jdbc-postgresql)
 
 ---
 

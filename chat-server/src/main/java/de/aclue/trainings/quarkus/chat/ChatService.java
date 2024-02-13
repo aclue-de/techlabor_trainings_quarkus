@@ -1,27 +1,21 @@
 package de.aclue.trainings.quarkus.chat;
 
-import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.transaction.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @ApplicationScoped
 public class ChatService {
 
-    List<Chat> chatList = new ArrayList<>();
-
-    @PostConstruct
-    void init() {
-        chatList.add(new Chat("system", "Hello from System"));
-    }
 
     public List<Chat> getChat() {
-        return chatList;
+        return Chat.listAll();
     }
 
+    @Transactional
     public void addChat(Chat chat) {
-        chatList.add(chat);
+        Chat.persist(chat);
     }
 
 }

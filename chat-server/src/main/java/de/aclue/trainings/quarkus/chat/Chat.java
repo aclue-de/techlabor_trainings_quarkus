@@ -1,6 +1,10 @@
 package de.aclue.trainings.quarkus.chat;
 
-public class Chat {
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import jakarta.persistence.Entity;
+
+@Entity
+public class Chat extends PanacheEntity {
     public String author;
     public String message;
 
