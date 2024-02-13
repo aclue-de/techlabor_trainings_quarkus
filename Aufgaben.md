@@ -1,6 +1,7 @@
 # Aufgaben
 
-Die Lösungen zu den Aufgaben finden Sie in gleich benannten Branches.
+Die Lösungen zu den Aufgaben finden Sie in gleich benannten Branches. 
+Ausgeführte Terminal Statements finden sich in dem "commands" Ordner.
 
 ---
 
@@ -12,6 +13,8 @@ Die Schnittstelle besteht aus einem GET Endpunkt, welcher alle vorhandenen Nachr
 Das Object Chat soll aus einem User und einer Message bestehen.
 
 Nutzen Sie JSON als Datenformat für die Kommunikation.
+
+Erstellen Sie Tests für die REST Schnittstelle.
 
 ---
 

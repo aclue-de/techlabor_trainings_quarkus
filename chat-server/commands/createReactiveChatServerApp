@@ -1,0 +1,1 @@
+quarkus create app -x "quarkus-resteasy-reactive-jsonb" de.aclue.trainings.quarkus:chat-server:1.0
