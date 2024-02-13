@@ -1,7 +1,7 @@
 package de.aclue.trainings.quarkus.chat;
 
+import io.smallrye.mutiny.Uni;
 import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.transaction.Transactional;
 
 import java.util.List;
 
@@ -9,13 +9,12 @@ import java.util.List;
 public class ChatService {
 
 
-    public List<Chat> getChat() {
+    public Uni<List<Chat>> getChat() {
         return Chat.listAll();
     }
 
-    @Transactional
-    public void addChat(Chat chat) {
-        Chat.persist(chat);
+    public Uni<Chat> addChat(Chat chat) {
+        return chat.persist();
     }
 
 }

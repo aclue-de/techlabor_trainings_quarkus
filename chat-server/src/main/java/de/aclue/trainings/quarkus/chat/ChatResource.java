@@ -1,5 +1,7 @@
 package de.aclue.trainings.quarkus.chat;
 
+import io.quarkus.hibernate.reactive.panache.common.WithTransaction;
+import io.smallrye.mutiny.Uni;
 import jakarta.ws.rs.*;
 
 import java.util.List;
@@ -17,12 +19,15 @@ public class ChatResource {
     }
 
     @GET
-    public List<Chat> getChat() {
+    @WithTransaction
+    public Uni<List<Chat>> getChat() {
         return chatService.getChat();
     }
 
     @POST
-    public void sendChat(Chat chat) {
-        chatService.addChat(chat);
+    @WithTransaction
+    public Uni<Chat> sendChat(Chat chat) {
+        return chatService.addChat(chat);
+
     }
 }

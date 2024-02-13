@@ -1,6 +1,6 @@
 package de.aclue.trainings.quarkus.chat;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import io.quarkus.hibernate.reactive.panache.PanacheEntity;
 import jakarta.persistence.Entity;
 
 @Entity

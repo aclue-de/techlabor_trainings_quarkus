@@ -22,13 +22,14 @@ public class ChatResourceTest {
     }
 
     @Test
-    public void testPostChatEndpoint() {
+    public void testPostChatEndpoint() throws InterruptedException {
         given()
                 .body("{\"author\": \"carl\", \"message\":\"Hello World\"}")
                 .header("Content-Type", "application/json")
                 .when().post()
                 .then()
                 .statusCode(204);
+
 
         given()
                 .when()

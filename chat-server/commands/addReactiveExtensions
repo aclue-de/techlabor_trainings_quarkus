@@ -1,0 +1,3 @@
+quarkus ext add quarkus-resteasy-reactive-jsonb,quarkus-hibernate-reactive-panache,quarkus-reactive-pg-client
+
+quarkus ext remove quarkus-jdbc-postgresql,quarkus-hibernate-orm-panache
