@@ -1,0 +1,1 @@
+quarkus create app -x "quarkus-resteasy-reactive-jsonb,quarkus-rest-client-reactive-jsonb,quarkus-hibernate-validator" de.aclue.trainings.quarkus:chat-client:1.0.0-SNAPSHOT
